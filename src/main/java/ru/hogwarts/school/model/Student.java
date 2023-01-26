@@ -16,6 +16,7 @@ public class Student {
     private Faculty faculty;
 
 
+
     public Student(Long id, String name, int age) {
         this.id = id;
         this.name = name;
