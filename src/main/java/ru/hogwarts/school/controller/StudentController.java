@@ -85,6 +85,7 @@ public class StudentController {
         return studentService.addStudent(student);
     }
 
+
     @PutMapping
     public ResponseEntity<Student> editStudent(@RequestBody Student student) {
         Student foundStudent = studentService.editStudent(student);
