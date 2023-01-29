@@ -47,8 +47,9 @@ public class StudentController {
         return ResponseEntity.ok(student);
     }
 
+
     @GetMapping("/filter/{age}")
-    public ResponseEntity<Collection<Student>> filterByAge(@RequestParam(required = false) int age) {
+    public ResponseEntity<Collection<Student>> filterByAge(@RequestParam(required = false) Integer age) {
         if (age > 0) {
             return ResponseEntity.ok(studentService.filterByAge(age));
         }
