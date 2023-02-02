@@ -12,6 +12,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.List;
 
 import static java.nio.file.StandardOpenOption.CREATE_NEW;
 
@@ -91,5 +92,17 @@ public class StudentService {
 
     private String getExtension(String fileName) {
         return fileName.substring(fileName.lastIndexOf(".") + 1);
+    }
+
+    public int countAllStudets(){
+        return studentRepository.countAllStudets();
+    }
+
+    public float countAverageAge(){
+        return studentRepository.countAverageAge();
+    }
+
+    public List<Student> getLastFive(){
+        return studentRepository.getLastFive();
     }
 }
