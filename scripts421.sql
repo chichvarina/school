@@ -5,18 +5,9 @@
 должно присваиваться 20 лет.
 */
 
-create table student1
-(
-    name text not null unique,
-    age integer not null default 20 check (age > 15)
-);
+ALTER TABLE student add constraint check_age check (age >= 16);
 
-create table faculty1
-(
-    name text not null,
-    color text not null,
-    CONSTRAINT name_color_unique UNIQUE(name, color)
-);
+ALTER TABLE faculty add constraint name_color_unique UNIQUE(name, color);
 
-
+ALTER TABLE student alter column age set default 20;
 
